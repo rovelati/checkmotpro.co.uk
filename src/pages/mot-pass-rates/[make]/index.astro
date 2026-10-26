@@ -1,0 +1,106 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import makesModels from '../../../data/uk_makes_models.json';
+
+export function getStaticPaths() {
+  return makesModels.map(makeData => ({
+    params: { make: makeData.slug },
+    props: { makeData }
+  }));
+}
+
+const { makeData } = Astro.props;
+const avgPass = (makeData.models.reduce((acc, m) => acc + m.passRate, 0) / makeData.models.length).toFixed(1);
+
+const title = `${makeData.make} MOT Pass Rates & Common Failures — UK Reliability Report | CheckMOTPro`;
+const description = `Official DVSA MOT statistics for ${makeData.make}. Average pass rate ${avgPass}%, top failure reasons, typical advisory notices and model comparison across the UK.`;
+---
+
+<Layout title={title} description={description} canonical={`https://checkmotpro.co.uk/mot-pass-rates/${makeData.slug}/`}>
+  <div class="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-zinc-400 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-amber-400">Home</a>
+      <span>›</span>
+      <a href="/mot-pass-rates/" class="hover:text-amber-400">MOT Pass Rates</a>
+      <span>›</span>
+      <span class="text-white font-semibold">{makeData.make}</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-10 mb-10 shadow-2xl">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold mb-3">
+            UK Fleet Testing Analytics
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            {makeData.make} <span class="text-amber-400">MOT Reliability & Pass Rates</span>
+          </h1>
+        </div>
+
+        <div class="px-5 py-3 rounded-2xl bg-zinc-950/80 border border-zinc-800 text-center shrink-0">
+          <div class="text-[10px] text-zinc-400 uppercase font-bold tracking-wider">Manufacturer Avg</div>
+          <div class="text-3xl font-black text-emerald-400 font-mono">{avgPass}%</div>
+          <div class="text-[10px] text-zinc-500">First-time Pass Rate</div>
+        </div>
+      </div>
+
+      <p class="text-sm sm:text-base text-zinc-300 max-w-3xl leading-relaxed">
+        Based on comprehensive testing figures from the Driver and Vehicle Standards Agency (DVSA). Below you will find the specific MOT performance, common failure reasons, and pre-test advice for all popular {makeData.make} models.
+      </p>
+    </div>
+
+    <!-- Models Grid -->
+    <h2 class="text-xl font-bold text-white mb-6">Popular {makeData.make} Models Tested</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      {makeData.models.map(mod => (
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h3 class="text-2xl font-black text-white">{makeData.make} {mod.name}</h3>
+                <span class="text-xs text-zinc-400">Average test mileage: {mod.avgMileage.toLocaleString()} miles</span>
+              </div>
+              <div class="text-right">
+                <span class="text-2xl font-black text-emerald-400 font-mono">{mod.passRate}%</span>
+                <span class="text-[10px] text-zinc-500 block">Pass Rate</span>
+              </div>
+            </div>
+
+            <!-- Top Failures Bar List -->
+            <div class="space-y-2.5 mb-6">
+              <div class="text-xs font-bold text-zinc-300 uppercase tracking-wider">Most Common Failure Points:</div>
+              {mod.topFailures.map(f => (
+                <div>
+                  <div class="flex justify-between text-xs text-zinc-400 mb-1">
+                    <span>{f.item}</span>
+                    <span class="font-bold text-red-400 font-mono">{f.pct}%</span>
+                  </div>
+                  <div class="w-full bg-zinc-950 h-2 rounded-full overflow-hidden">
+                    <div class="bg-red-500 h-full rounded-full" style={`width: ${f.pct * 3.5}%`}></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div class="bg-zinc-950/70 p-3.5 rounded-xl border border-zinc-800/80 mb-6">
+              <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider mb-1">Pre-MOT Tip:</div>
+              <p class="text-xs text-zinc-300 leading-relaxed">{mod.advice}</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-zinc-800 flex items-center justify-between">
+            <span class="text-xs text-zinc-400 font-mono">Tax: {mod.taxBand}</span>
+            <a
+              href={`/mot-pass-rates/${makeData.slug}/${mod.slug}/`}
+              class="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold rounded-xl text-xs uppercase tracking-wider transition-colors"
+            >
+              Full {mod.name} Report →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

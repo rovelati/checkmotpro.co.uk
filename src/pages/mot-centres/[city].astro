@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RegLookup from '../../components/RegLookup.astro';
+import cities from '../../data/uk_cities.json';
+
+export function getStaticPaths() {
+  return cities.map(city => ({
+    params: { city: city.slug },
+    props: { city }
+  }));
+}
+
+const { city } = Astro.props;
+
+const title = `MOT Test Centres in ${city.name} — Authorised Garages & Prices | CheckMOTPro`;
+const description = `Find authorised MOT testing centres in ${city.name} (${city.region}). Compare Class 4 car MOT test fees, check vehicle history and book an MOT test in ${city.name}.`;
+---
+
+<Layout title={title} description={description} canonical={`https://checkmotpro.co.uk/mot-centres/${city.slug}/`}>
+  <div class="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-zinc-400 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-amber-400">Home</a>
+      <span>›</span>
+      <a href="/mot-centres/" class="hover:text-amber-400">MOT Centres</a>
+      <span>›</span>
+      <span class="text-white font-semibold">{city.name}</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-10 mb-8 shadow-2xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold mb-3">
+        {city.region} • DVSA Approved Testing
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+        MOT Testing Centres in <span class="text-amber-400">{city.name}</span>
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed mb-6">
+        There are approximately <strong>{city.centresCount} authorised MOT testing stations</strong> operating across {city.name} and surrounding postcodes. In Great Britain, the maximum fee for a standard car (Class 4) is capped at <strong>£54.85</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-zinc-800 text-xs">
+        <div class="bg-zinc-950/70 p-3 rounded-xl border border-zinc-800">
+          <span class="text-zinc-500 block">Class 4 Max Legal Fee</span>
+          <span class="text-base font-bold text-white font-mono">£54.85</span>
+        </div>
+        <div class="bg-zinc-950/70 p-3 rounded-xl border border-zinc-800">
+          <span class="text-zinc-500 block">Average Local Garage Fee</span>
+          <span class="text-base font-bold text-emerald-400 font-mono">£35 - £45</span>
+        </div>
+        <div class="bg-zinc-950/70 p-3 rounded-xl border border-zinc-800">
+          <span class="text-zinc-500 block">Test Duration</span>
+          <span class="text-base font-bold text-white">45 - 60 minutes</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reg Lookup Component for Drivers in this City -->
+    <div class="mb-12">
+      <div class="text-center mb-4">
+        <h2 class="text-xl font-bold text-white">Need to check your MOT expiry date before booking in {city.name}?</h2>
+        <p class="text-xs text-zinc-400">Enter your number plate below for an instant, free test status check:</p>
+      </div>
+      <RegLookup />
+    </div>
+
+    <!-- City Local Advice & Guidelines -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 space-y-6">
+      <h2 class="text-xl sm:text-2xl font-black text-white">Booking an MOT Test in {city.name}</h2>
+
+      <div class="space-y-4 text-xs sm:text-sm text-zinc-300 leading-relaxed">
+        <div class="bg-zinc-950/60 p-4 rounded-xl border border-zinc-800">
+          <h3 class="font-bold text-white text-base mb-1">When can you book an MOT in {city.name}?</h3>
+          <p>
+            You can take your car for an MOT test up to <strong>one month minus a day</strong> before your current MOT certificate expires and keep your existing renewal date. For example, if your MOT runs out on 20 November, you can test from 21 October and your new certificate will still expire on 20 November the following year.
+          </p>
+        </div>
+
+        <div class="bg-zinc-950/60 p-4 rounded-xl border border-zinc-800">
+          <h3 class="font-bold text-white text-base mb-1">What to take to your MOT appointment:</h3>
+          <p>
+            Since the UK test network is 100% digitalised on the DVSA database, you do <strong>not</strong> need to bring your previous MOT certificate or V5C logbook. The testing station only needs your vehicle and ignition key.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

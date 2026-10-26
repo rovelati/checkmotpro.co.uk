@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RegLookup from '../../components/RegLookup.astro';
+
+const title = "Free UK Vehicle MOT & Road Tax Check Online | CheckMOTPro";
+const description = "Check any UK vehicle registration mark for MOT test history, advisories, mileage logs and tax status directly with official DVSA databases.";
+---
+
+<Layout title={title} description={description} canonical="https://checkmotpro.co.uk/check/">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="mb-4">
+      <a href="/" class="text-xs text-zinc-400 hover:text-amber-400 font-semibold flex items-center gap-1.5">
+        ← Back to Home
+      </a>
+    </div>
+
+    <RegLookup />
+  </div>
+</Layout>

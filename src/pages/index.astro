@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RegLookup from '../components/RegLookup.astro';
+import makesModels from '../data/uk_makes_models.json';
+import cities from '../data/uk_cities.json';
+
+const title = "Check MOT History Free — UK Vehicle Road Tax & Mileage Check | CheckMOTPro";
+const description = "Free instant UK MOT check. Check MOT expiry date, full pass/fail test history, mileage progression, failure reasons and DVLA road tax status with official government data.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section with Reg Lookup -->
+  <section class="relative pt-12 pb-16 px-4 border-b border-zinc-800 bg-gradient-to-b from-zinc-900/90 via-zinc-950 to-zinc-950" id="lookup">
+    <div class="max-w-5xl mx-auto text-center mb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Official DVSA & DVLA Open Vehicle Data
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white mb-4">
+        Free UK <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">MOT History</span> & <br class="hidden sm:inline" />
+        Car Tax Status Checker
+      </h1>
+
+      <p class="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto">
+        Check any car, van, or motorcycle registered in the UK. Instant MOT expiry date, full past test results, failure advisories, verified mileage history and road tax due date.
+      </p>
+    </div>
+
+    <!-- Interactive Registration Plate Lookup Component -->
+    <RegLookup />
+  </section>
+
+  <!-- Key Benefits Ribbon -->
+  <section class="border-b border-zinc-800 bg-zinc-900/40 py-6 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono">40M+</div>
+        <div class="text-xs text-zinc-400 mt-0.5">MOT Tests Recorded</div>
+      </div>
+      <div>
+        <div class="text-2xl sm:text-3xl font-black text-white font-mono">100% Free</div>
+        <div class="text-xs text-zinc-400 mt-0.5">No Hidden Fees or Paywalls</div>
+      </div>
+      <div>
+        <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">Real-time</div>
+        <div class="text-xs text-zinc-400 mt-0.5">DVSA & DVLA Live Feed</div>
+      </div>
+      <div>
+        <div class="text-2xl sm:text-3xl font-black text-white font-mono">Mileage Anti-Fraud</div>
+        <div class="text-xs text-zinc-400 mt-0.5">Odometer Rollback Detection</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- High-Value Pillar Pages Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <h2 class="text-2xl sm:text-3xl font-black text-white">UK Motoring Guides & Checks</h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mt-1">Everything you need to buy a used car safely and keep your vehicle legally roadworthy</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <a
+        href="/car-tax-check/"
+        class="p-6 bg-zinc-900 border border-zinc-800 hover:border-amber-400/50 rounded-2xl transition-all group block shadow-lg shadow-black/40"
+      >
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-wider font-mono">DVLA DATABASE</span>
+          <span class="text-zinc-500 group-hover:text-amber-400 group-hover:translate-x-1 transition-all">→</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">Check Car Tax Online</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">Check if your vehicle is taxed, SORN status, and view exact annual VED tax bands.</p>
+      </a>
+
+      <a
+        href="/mileage-rollback-check/"
+        class="p-6 bg-zinc-900 border border-zinc-800 hover:border-amber-400/50 rounded-2xl transition-all group block shadow-lg shadow-black/40"
+      >
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">ANTI-FRAUD</span>
+          <span class="text-zinc-500 group-hover:text-amber-400 group-hover:translate-x-1 transition-all">→</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">Odometer Rollback Check</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">Verify year-by-year MOT mileage records to detect clocked cars before you buy.</p>
+      </a>
+
+      <a
+        href="/mot-pass-rates/"
+        class="p-6 bg-zinc-900 border border-zinc-800 hover:border-amber-400/50 rounded-2xl transition-all group block shadow-lg shadow-black/40"
+      >
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider font-mono">RELIABILITY DATA</span>
+          <span class="text-zinc-500 group-hover:text-amber-400 group-hover:translate-x-1 transition-all">→</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">MOT Pass Rates by Model</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">Explore official DVSA pass/fail rates and top 5 failure points for all popular UK models.</p>
+      </a>
+
+      <a
+        href="/mot-centres/"
+        class="p-6 bg-zinc-900 border border-zinc-800 hover:border-amber-400/50 rounded-2xl transition-all group block shadow-lg shadow-black/40"
+      >
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-wider font-mono">LOCAL CENTRES</span>
+          <span class="text-zinc-500 group-hover:text-amber-400 group-hover:translate-x-1 transition-all">→</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">Find Local MOT Centres</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">Find official authorised MOT testing stations and test fees across 40+ UK cities.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Popular Make & Model Reliability Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-2">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-black text-white">UK Make & Model MOT Reliability</h2>
+        <p class="text-xs text-zinc-400">Official DVSA average pass rates and common failure components</p>
+      </div>
+      <a href="/mot-pass-rates/" class="text-xs text-amber-400 hover:underline font-bold">
+        View All Makes & Models →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {makesModels.slice(0, 9).map(m => (
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition-colors flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-base font-black text-white">{m.make}</span>
+              <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                Avg Pass: {m.models[0]?.passRate}%
+              </span>
+            </div>
+            <p class="text-xs text-zinc-400 mb-3">
+              Most tested: {m.models.map(mod => mod.name).join(', ')}
+            </p>
+          </div>
+          <div class="pt-3 border-t border-zinc-800 flex items-center justify-between">
+            <a
+              href={`/mot-pass-rates/${m.slug}/`}
+              class="text-xs text-amber-400 hover:text-amber-300 font-semibold"
+            >
+              Explore {m.make} Reliability & Faults →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Educational SEO Section: What is an MOT & Penalties -->
+  <section class="max-w-4xl mx-auto px-4 py-12 border-t border-zinc-800">
+    <h2 class="text-2xl sm:text-3xl font-black text-white mb-6 text-center">
+      Everything You Need to Know About the UK MOT Test
+    </h2>
+
+    <div class="space-y-6 text-zinc-300 text-sm leading-relaxed">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-white mb-2">When does a vehicle need an MOT test?</h3>
+        <p>
+          In Great Britain, every car and motorcycle must undergo an MOT test once it reaches <strong>3 years of age</strong> from the date of first registration (or 1 year for ambulances, taxis, and commercial vehicles). After the first test, an MOT certificate is valid for exactly <strong>12 months</strong>, requiring annual renewal.
+        </p>
+      </div>
+
+      <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-red-400 mb-2">What is the penalty for driving without a valid MOT?</h3>
+        <p>
+          Driving a vehicle on UK public roads without a valid MOT certificate carries a fine of up to <strong>£1,000</strong>. Furthermore, driving an unroadworthy vehicle with a "Dangerous" defect can lead to a fine of up to <strong>£2,500</strong>, a driving ban, and 3 penalty points. Most crucially, driving without an MOT automatically invalidates your car insurance policy.
+        </p>
+      </div>
+
+      <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-white mb-2">What does the MOT test check?</h3>
+        <p class="mb-3">
+          The test ensures your vehicle meets minimum road safety and environmental standards. Key components inspected include:
+        </p>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-300">
+          <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">•</span> Brakes, pads, discs and pedal travel</li>
+          <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">•</span> Steering, suspension linkages and shock absorbers</li>
+          <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">•</span> Tyres (minimum 1.6mm legal tread) & wheels</li>
+          <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">•</span> All exterior lights, headlamp aim & indicators</li>
+          <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">•</span> Exhaust emissions & catalytic converter / DPF</li>
+          <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">•</span> Windscreen, wipers, washers & horn</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top UK Cities Directory -->
+  <section class="max-w-6xl mx-auto px-4 py-12 border-t border-zinc-800">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-xl font-bold text-white">Find MOT Testing Centres by City</h2>
+      <a href="/mot-centres/" class="text-xs text-amber-400 hover:underline font-bold">All 40+ UK Cities →</a>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 text-xs">
+      {cities.slice(0, 20).map(c => (
+        <a
+          href={`/mot-centres/${c.slug}/`}
+          class="p-3 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-amber-400/40 rounded-xl text-left transition-colors group block"
+        >
+          <div class="font-bold text-white group-hover:text-amber-400 transition-colors">{c.name}</div>
+          <div class="text-[11px] text-zinc-500">{c.centresCount} Test Centres</div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

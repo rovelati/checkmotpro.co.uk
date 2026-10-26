@@ -1,0 +1,193 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+}
+
+const { title, description, canonical = Astro.url.href } = Astro.props;
+
+const ADSENSE_PUB_ID = 'pub-2168172914069272';
+const UNICONSENT_CMP_ID = 'b039ba7539';
+---
+
+<!doctype html>
+<html lang="en-GB" class="scroll-smooth bg-zinc-950 text-zinc-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="CheckMOTPro.co.uk" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+
+    <!-- Google AdSense -->
+    <script
+      async
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-${ADSENSE_PUB_ID}`}
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- UniConsent CMP -->
+    <script
+      async
+      src={`https://cmp.uniconsent.com/v2/stub.min.js`}
+      data-cmp-id={UNICONSENT_CMP_ID}
+    ></script>
+
+    <!-- Schema.org WebSite -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CheckMOTPro.co.uk",
+      "url": "https://checkmotpro.co.uk/",
+      "description": "Free UK MOT History & Road Tax Status Check with official DVSA and DVLA government data.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://checkmotpro.co.uk/check/{search_term_string}/"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    })} />
+  </head>
+
+  <body class="min-h-screen flex flex-col font-sans selection:bg-amber-400 selection:text-zinc-950">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center font-black text-zinc-950 text-sm shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+            MOT
+          </div>
+          <div class="flex flex-col">
+            <span class="text-base font-black tracking-tight text-white group-hover:text-amber-400 transition-colors">
+              CheckMOT<span class="text-amber-400 font-extrabold">Pro</span><span class="text-xs font-mono text-zinc-400">.co.uk</span>
+            </span>
+            <span class="text-[10px] text-zinc-400 font-medium">Free UK Vehicle & Tax Check</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-zinc-300">
+          <a href="/" class="hover:text-amber-400 transition-colors">Check Reg</a>
+          <a href="/mot-pass-rates/" class="hover:text-amber-400 transition-colors">Pass Rates & Models</a>
+          <a href="/mot-centres/" class="hover:text-amber-400 transition-colors">MOT Centres</a>
+          <a href="/car-tax-check/" class="hover:text-amber-400 transition-colors">Road Tax</a>
+          <a href="/mileage-rollback-check/" class="hover:text-amber-400 transition-colors">Mileage Fraud</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="/#lookup"
+            class="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold rounded-xl text-xs uppercase tracking-wider transition-all duration-200 shadow-md shadow-amber-400/20 cursor-pointer flex items-center gap-1.5"
+          >
+            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            Enter Reg
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Slot -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 text-zinc-400 text-xs">
+      <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <!-- Col 1: About & Gov Data -->
+          <div class="md:col-span-1">
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-6 h-6 rounded-lg bg-amber-400 flex items-center justify-center font-black text-zinc-950 text-xs">
+                MOT
+              </div>
+              <span class="font-bold text-white text-sm">CheckMOTPro.co.uk</span>
+            </div>
+            <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+              Free, instant MOT test history and DVLA road tax status checker for vehicles registered in Great Britain and Northern Ireland.
+            </p>
+            <div class="text-[11px] text-zinc-400 bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg">
+              Contains public sector information licensed under the <strong class="text-zinc-300">Open Government Licence v3.0 (OGL)</strong> from the Driver and Vehicle Standards Agency (DVSA) and DVLA.
+            </div>
+          </div>
+
+          <!-- Col 2: Popular Checks -->
+          <div>
+            <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Free Vehicle Checks</h4>
+            <ul class="space-y-2">
+              <li><a href="/#lookup" class="hover:text-amber-400 transition-colors">MOT History by Registration</a></li>
+              <li><a href="/car-tax-check/" class="hover:text-amber-400 transition-colors">Check Car Tax (Road Tax Status)</a></li>
+              <li><a href="/mileage-rollback-check/" class="hover:text-amber-400 transition-colors">Odometer Clocking / Mileage History</a></li>
+              <li><a href="/mot-pass-rates/" class="hover:text-amber-400 transition-colors">MOT Pass Rates by Make & Model</a></li>
+              <li><a href="/mot-centres/" class="hover:text-amber-400 transition-colors">Find Local MOT Testing Centres</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Popular Makes -->
+          <div>
+            <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Popular Make Pass Rates</h4>
+            <ul class="space-y-2">
+              <li><a href="/mot-pass-rates/ford/" class="hover:text-amber-400 transition-colors">Ford MOT Reliability & Failures</a></li>
+              <li><a href="/mot-pass-rates/vauxhall/" class="hover:text-amber-400 transition-colors">Vauxhall Corsa & Astra Reliability</a></li>
+              <li><a href="/mot-pass-rates/volkswagen/" class="hover:text-amber-400 transition-colors">Volkswagen Golf & Polo Reliability</a></li>
+              <li><a href="/mot-pass-rates/bmw/" class="hover:text-amber-400 transition-colors">BMW 3 Series & 1 Series MOT Data</a></li>
+              <li><a href="/mot-pass-rates/nissan/" class="hover:text-amber-400 transition-colors">Nissan Qashqai & Juke Common Faults</a></li>
+              <li><a href="/mot-pass-rates/toyota/" class="hover:text-amber-400 transition-colors">Toyota Yaris & Corolla Pass Rates</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Network & Legal -->
+          <div>
+            <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">European Digital Network</h4>
+            <p class="text-[11px] text-zinc-400 mb-2">Part of our European programmatic utility network:</p>
+            <ul class="space-y-1.5 mb-4 text-[11px]">
+              <li><a href="https://pumpchecker.co.uk" target="_blank" rel="noopener" class="hover:text-amber-400 transition-colors">🇬🇧 PumpChecker.co.uk (UK Petrol & Diesel)</a></li>
+              <li><a href="https://spritchecker.de" target="_blank" rel="noopener" class="hover:text-amber-400 transition-colors">🇩🇪 SpritChecker.de (Benzinpreise)</a></li>
+              <li><a href="https://prezzobenza.it" target="_blank" rel="noopener" class="hover:text-amber-400 transition-colors">🇮🇹 PrezzoBenza.it (Prezzi Carburanti)</a></li>
+              <li><a href="https://lecarbu.fr" target="_blank" rel="noopener" class="hover:text-amber-400 transition-colors">🇫🇷 LeCarbu.fr (Prix des Carburants)</a></li>
+              <li><a href="https://fernsehheute.de" target="_blank" rel="noopener" class="hover:text-amber-400 transition-colors">🇩🇪 FernsehHeute.de (TV-Programm)</a></li>
+              <li><a href="https://123programmitv.it" target="_blank" rel="noopener" class="hover:text-amber-400 transition-colors">🇮🇹 123ProgrammiTV.it (Guida TV)</a></li>
+            </ul>
+
+            <div class="flex flex-wrap gap-3 pt-2 border-t border-zinc-800 text-[11px]">
+              <a href="/privacy-policy/" class="hover:text-zinc-200">Privacy Policy</a>
+              <span>•</span>
+              <a href="/terms/" class="hover:text-zinc-200">Terms of Service</a>
+              <span>•</span>
+              <a href="/cookie-policy/" class="hover:text-zinc-200">Cookies</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between text-zinc-400 text-[11px] gap-3">
+          <div>
+            © {new Date().getFullYear()} CheckMOTPro.co.uk. All rights reserved.
+          </div>
+          <div>
+            Data sourced from DVSA & DVLA via Crown Copyright / OGL v3.0.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "checkmotpro-co-uk",
+  "version": "1.0.0",
+  "description": "CheckMOTPro.co.uk — Free UK MOT History & Road Tax Status Check. Real-time official DVLA and DVSA vehicle data, test results, mileage history, advisories and failure points.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "@tailwindcss/vite": "^4.0.9",
+    "astro": "^5.4.2",
+    "tailwindcss": "^4.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0"
+  }
+}

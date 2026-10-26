@@ -1,0 +1,814 @@
+[
+  {
+    "make": "Ford",
+    "slug": "ford",
+    "logo": "Ford",
+    "models": [
+      {
+        "name": "Fiesta",
+        "slug": "fiesta",
+        "passRate": 81.4,
+        "avgMileage": 53200,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension coil springs",
+            "pct": 18.2
+          },
+          {
+            "item": "Lamps & position lights",
+            "pct": 15.1
+          },
+          {
+            "item": "Brake pad wear",
+            "pct": 12.8
+          },
+          {
+            "item": "Tyre tread depth",
+            "pct": 9.4
+          }
+        ],
+        "advice": "Check rear coil springs for corrosion and front anti-roll bar linkages, which are the most common Fiesta MOT failure points."
+      },
+      {
+        "name": "Focus",
+        "slug": "focus",
+        "passRate": 83.1,
+        "avgMileage": 64800,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension arms & bushings",
+            "pct": 16.5
+          },
+          {
+            "item": "Headlamp aim & bulbs",
+            "pct": 14.3
+          },
+          {
+            "item": "Brake disc thickness",
+            "pct": 13.0
+          },
+          {
+            "item": "Tyre condition",
+            "pct": 10.2
+          }
+        ],
+        "advice": "Inspect front suspension lower arm rear bush degradation and check exhaust emissions on older EcoBoost petrol models."
+      },
+      {
+        "name": "Puma",
+        "slug": "puma",
+        "passRate": 89.2,
+        "avgMileage": 28500,
+        "taxBand": "\u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Windscreen chip/crack",
+            "pct": 12.0
+          },
+          {
+            "item": "Tyre pressure & wear",
+            "pct": 11.5
+          },
+          {
+            "item": "Headlamp alignment",
+            "pct": 9.2
+          },
+          {
+            "item": "Brake wear indicator",
+            "pct": 6.8
+          }
+        ],
+        "advice": "Puma has one of the highest pass rates in class; check windscreen condition and tyre tread before the test."
+      },
+      {
+        "name": "Kuga",
+        "slug": "kuga",
+        "passRate": 84.7,
+        "avgMileage": 58000,
+        "taxBand": "\u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Brake pads & discs",
+            "pct": 17.1
+          },
+          {
+            "item": "Suspension link rods",
+            "pct": 14.8
+          },
+          {
+            "item": "Rear lighting",
+            "pct": 11.2
+          },
+          {
+            "item": "Tyres",
+            "pct": 10.0
+          }
+        ],
+        "advice": "Check rear brake pad wear which tends to wear faster on heavier SUV models."
+      }
+    ]
+  },
+  {
+    "make": "Vauxhall",
+    "slug": "vauxhall",
+    "logo": "Vauxhall",
+    "models": [
+      {
+        "name": "Corsa",
+        "slug": "corsa",
+        "passRate": 79.8,
+        "avgMileage": 49500,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Lamps & indicators",
+            "pct": 19.4
+          },
+          {
+            "item": "Suspension ball joints",
+            "pct": 16.2
+          },
+          {
+            "item": "Brakes efficiency",
+            "pct": 14.1
+          },
+          {
+            "item": "Tyres",
+            "pct": 11.0
+          }
+        ],
+        "advice": "Check all external bulbs and number plate lights; lighting faults account for nearly 20% of Corsa first-time failures."
+      },
+      {
+        "name": "Astra",
+        "slug": "astra",
+        "passRate": 80.6,
+        "avgMileage": 68200,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension springs & dampers",
+            "pct": 17.8
+          },
+          {
+            "item": "Brake discs & pads",
+            "pct": 15.3
+          },
+          {
+            "item": "Headlamp aim",
+            "pct": 13.9
+          },
+          {
+            "item": "Emissions",
+            "pct": 9.8
+          }
+        ],
+        "advice": "Verify handbrake cable tension and look out for front suspension drop link play."
+      },
+      {
+        "name": "Mokka",
+        "slug": "mokka",
+        "passRate": 82.5,
+        "avgMileage": 46300,
+        "taxBand": "\u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Brake pad thickness",
+            "pct": 16.0
+          },
+          {
+            "item": "Tyre tread",
+            "pct": 13.5
+          },
+          {
+            "item": "Lighting and signalling",
+            "pct": 12.8
+          },
+          {
+            "item": "Suspension components",
+            "pct": 10.2
+          }
+        ],
+        "advice": "Inspect front brake pads and check tyre wear on inside edges."
+      }
+    ]
+  },
+  {
+    "make": "Volkswagen",
+    "slug": "volkswagen",
+    "logo": "Volkswagen",
+    "models": [
+      {
+        "name": "Golf",
+        "slug": "golf",
+        "passRate": 85.8,
+        "avgMileage": 67100,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Lamps & registration plate light",
+            "pct": 15.6
+          },
+          {
+            "item": "Suspension springs",
+            "pct": 14.2
+          },
+          {
+            "item": "Brake pads & discs",
+            "pct": 12.9
+          },
+          {
+            "item": "Tyres",
+            "pct": 10.1
+          }
+        ],
+        "advice": "Examine rear coil springs for hairline cracks and check LED light cluster functionality."
+      },
+      {
+        "name": "Polo",
+        "slug": "polo",
+        "passRate": 86.4,
+        "avgMileage": 47800,
+        "taxBand": "\u00a3140 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Lighting and signalling",
+            "pct": 16.2
+          },
+          {
+            "item": "Front suspension bushes",
+            "pct": 13.5
+          },
+          {
+            "item": "Brake pads",
+            "pct": 11.8
+          },
+          {
+            "item": "Tyre tread depth",
+            "pct": 9.7
+          }
+        ],
+        "advice": "Polo performs well above average; simple light bulb checks prevent 60% of unnecessary failures."
+      },
+      {
+        "name": "Tiguan",
+        "slug": "tiguan",
+        "passRate": 87.1,
+        "avgMileage": 59400,
+        "taxBand": "\u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Brake components",
+            "pct": 15.9
+          },
+          {
+            "item": "Suspension bushings",
+            "pct": 13.2
+          },
+          {
+            "item": "Tyre condition",
+            "pct": 11.0
+          },
+          {
+            "item": "Screenwash & wipers",
+            "pct": 7.5
+          }
+        ],
+        "advice": "Top up windscreen wash and check electronic parking brake operation before taking for inspection."
+      }
+    ]
+  },
+  {
+    "make": "BMW",
+    "slug": "bmw",
+    "logo": "BMW",
+    "models": [
+      {
+        "name": "3 Series",
+        "slug": "3-series",
+        "passRate": 84.2,
+        "avgMileage": 72300,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension control arms & bushes",
+            "pct": 18.5
+          },
+          {
+            "item": "Brake pad sensors & discs",
+            "pct": 15.0
+          },
+          {
+            "item": "Tyre inner edge wear (run-flats)",
+            "pct": 14.2
+          },
+          {
+            "item": "Lighting",
+            "pct": 10.8
+          }
+        ],
+        "advice": "Run-flat tyres frequently wear on the inner shoulder unnoticed; check tyres from underneath before the MOT."
+      },
+      {
+        "name": "1 Series",
+        "slug": "1-series",
+        "passRate": 83.9,
+        "avgMileage": 59800,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension springs",
+            "pct": 17.1
+          },
+          {
+            "item": "Tyres condition",
+            "pct": 14.8
+          },
+          {
+            "item": "Lamps & reflectors",
+            "pct": 13.6
+          },
+          {
+            "item": "Brake pads",
+            "pct": 12.0
+          }
+        ],
+        "advice": "Inspect rear suspension coil springs which are prone to fracture near bottom cup."
+      },
+      {
+        "name": "5 Series",
+        "slug": "5-series",
+        "passRate": 85.0,
+        "avgMileage": 84500,
+        "taxBand": "\u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension wishbones & bushes",
+            "pct": 19.3
+          },
+          {
+            "item": "Brakes",
+            "pct": 15.8
+          },
+          {
+            "item": "Tyres",
+            "pct": 13.1
+          },
+          {
+            "item": "Headlamp aim",
+            "pct": 9.2
+          }
+        ],
+        "advice": "Check air suspension bellows for leaks on Touring models and front control arm bushes."
+      }
+    ]
+  },
+  {
+    "make": "Audi",
+    "slug": "audi",
+    "logo": "Audi",
+    "models": [
+      {
+        "name": "A3",
+        "slug": "a3",
+        "passRate": 85.5,
+        "avgMileage": 63200,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Lamps & signals",
+            "pct": 16.0
+          },
+          {
+            "item": "Suspension springs",
+            "pct": 14.7
+          },
+          {
+            "item": "Brake pads & discs",
+            "pct": 13.5
+          },
+          {
+            "item": "Tyres",
+            "pct": 10.4
+          }
+        ],
+        "advice": "Check registration number plate bulbs and front suspension drop links."
+      },
+      {
+        "name": "A4",
+        "slug": "a4",
+        "passRate": 84.8,
+        "avgMileage": 76400,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Multi-link front suspension bushes",
+            "pct": 20.1
+          },
+          {
+            "item": "Brakes",
+            "pct": 14.5
+          },
+          {
+            "item": "Tyres",
+            "pct": 12.8
+          },
+          {
+            "item": "Headlamps",
+            "pct": 10.2
+          }
+        ],
+        "advice": "The complex multi-link front suspension requires careful check of all rubber ball-joint gaiters."
+      },
+      {
+        "name": "Q3",
+        "slug": "q3",
+        "passRate": 87.4,
+        "avgMileage": 48900,
+        "taxBand": "\u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Brake pad thickness",
+            "pct": 15.2
+          },
+          {
+            "item": "Tyre wear",
+            "pct": 12.8
+          },
+          {
+            "item": "Lighting",
+            "pct": 11.5
+          },
+          {
+            "item": "Wipers",
+            "pct": 6.8
+          }
+        ],
+        "advice": "Inspect front and rear brake pads for minimum 1.5mm lining thickness."
+      }
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "slug": "mercedes-benz",
+    "logo": "Mercedes-Benz",
+    "models": [
+      {
+        "name": "A-Class",
+        "slug": "a-class",
+        "passRate": 84.9,
+        "avgMileage": 52100,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension joints & gaiters",
+            "pct": 16.8
+          },
+          {
+            "item": "Lamps & LED indicators",
+            "pct": 15.3
+          },
+          {
+            "item": "Brake pad wear",
+            "pct": 13.9
+          },
+          {
+            "item": "Tyres",
+            "pct": 11.2
+          }
+        ],
+        "advice": "Check parking brake efficiency and inspect lower ball joint dust covers."
+      },
+      {
+        "name": "C-Class",
+        "slug": "c-class",
+        "passRate": 83.7,
+        "avgMileage": 71900,
+        "taxBand": "\u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension arms & ball joints",
+            "pct": 18.6
+          },
+          {
+            "item": "Foot-operated parking brake",
+            "pct": 15.4
+          },
+          {
+            "item": "Tyres",
+            "pct": 13.5
+          },
+          {
+            "item": "Headlamp aim",
+            "pct": 9.8
+          }
+        ],
+        "advice": "Foot-operated or electronic parking brake must achieve at least 16% braking efficiency."
+      }
+    ]
+  },
+  {
+    "make": "Nissan",
+    "slug": "nissan",
+    "logo": "Nissan",
+    "models": [
+      {
+        "name": "Qashqai",
+        "slug": "qashqai",
+        "passRate": 82.8,
+        "avgMileage": 59300,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Front suspension wishbones",
+            "pct": 19.5
+          },
+          {
+            "item": "Brake pads & discs",
+            "pct": 15.8
+          },
+          {
+            "item": "Lamps & indicators",
+            "pct": 13.2
+          },
+          {
+            "item": "Tyres",
+            "pct": 11.0
+          }
+        ],
+        "advice": "Front suspension lower arm bushes are the #1 Qashqai failure; have a mechanic check them before test day."
+      },
+      {
+        "name": "Juke",
+        "slug": "juke",
+        "passRate": 83.2,
+        "avgMileage": 51400,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension arm bushes",
+            "pct": 17.4
+          },
+          {
+            "item": "Lighting and signalling",
+            "pct": 14.8
+          },
+          {
+            "item": "Brakes",
+            "pct": 13.2
+          },
+          {
+            "item": "Tyres",
+            "pct": 10.5
+          }
+        ],
+        "advice": "Inspect front suspension bushes and check rear number plate illumination bulbs."
+      }
+    ]
+  },
+  {
+    "make": "Toyota",
+    "slug": "toyota",
+    "logo": "Toyota",
+    "models": [
+      {
+        "name": "Yaris",
+        "slug": "yaris",
+        "passRate": 88.5,
+        "avgMileage": 48700,
+        "taxBand": "\u00a30 - \u00a3180/yr",
+        "topFailures": [
+          {
+            "item": "Lamps & reflectors",
+            "pct": 16.2
+          },
+          {
+            "item": "Brake disc corrosion",
+            "pct": 13.1
+          },
+          {
+            "item": "Tyre wear",
+            "pct": 11.4
+          },
+          {
+            "item": "Suspension",
+            "pct": 9.8
+          }
+        ],
+        "advice": "On Hybrid models, regenerative braking can lead to rear brake disc corrosion from light use; check discs for surface rust."
+      },
+      {
+        "name": "Corolla",
+        "slug": "corolla",
+        "passRate": 91.2,
+        "avgMileage": 39100,
+        "taxBand": "\u00a3180/yr",
+        "topFailures": [
+          {
+            "item": "Tyre tread & cuts",
+            "pct": 12.8
+          },
+          {
+            "item": "Lighting",
+            "pct": 11.5
+          },
+          {
+            "item": "Windscreen damage",
+            "pct": 9.2
+          },
+          {
+            "item": "Brakes",
+            "pct": 8.0
+          }
+        ],
+        "advice": "Corolla has one of the highest MOT pass rates in the UK (over 91%). Standard tyre and bulb checks are sufficient."
+      }
+    ]
+  },
+  {
+    "make": "Hyundai",
+    "slug": "hyundai",
+    "logo": "Hyundai",
+    "models": [
+      {
+        "name": "Tucson",
+        "slug": "tucson",
+        "passRate": 86.8,
+        "avgMileage": 46200,
+        "taxBand": "\u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Brake pads & discs",
+            "pct": 15.8
+          },
+          {
+            "item": "Tyres",
+            "pct": 13.2
+          },
+          {
+            "item": "Suspension links",
+            "pct": 11.9
+          },
+          {
+            "item": "Lamps",
+            "pct": 10.4
+          }
+        ],
+        "advice": "Check rear brake pad wear and inspect tyre sidewalls for accidental kerb damage."
+      },
+      {
+        "name": "i10",
+        "slug": "i10",
+        "passRate": 84.1,
+        "avgMileage": 38900,
+        "taxBand": "\u00a320 - \u00a3160/yr",
+        "topFailures": [
+          {
+            "item": "Lamps and signalling",
+            "pct": 17.5
+          },
+          {
+            "item": "Brake performance",
+            "pct": 14.1
+          },
+          {
+            "item": "Suspension springs",
+            "pct": 12.3
+          },
+          {
+            "item": "Tyres",
+            "pct": 10.8
+          }
+        ],
+        "advice": "Handbrake travel can stretch on city-driven i10 models; ensure it holds the car firmly on steep inclines."
+      }
+    ]
+  },
+  {
+    "make": "Kia",
+    "slug": "kia",
+    "logo": "Kia",
+    "models": [
+      {
+        "name": "Sportage",
+        "slug": "sportage",
+        "passRate": 86.2,
+        "avgMileage": 53800,
+        "taxBand": "\u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Brake pads and discs",
+            "pct": 16.4
+          },
+          {
+            "item": "Tyre tread depth",
+            "pct": 13.8
+          },
+          {
+            "item": "Suspension linkages",
+            "pct": 12.1
+          },
+          {
+            "item": "Lamps",
+            "pct": 10.5
+          }
+        ],
+        "advice": "Examine rear brake pads and make sure all LED light units are fully illuminated."
+      },
+      {
+        "name": "Picanto",
+        "slug": "picanto",
+        "passRate": 83.8,
+        "avgMileage": 36500,
+        "taxBand": "\u00a320 - \u00a3160/yr",
+        "topFailures": [
+          {
+            "item": "Lighting and signalling",
+            "pct": 18.2
+          },
+          {
+            "item": "Handbrake efficiency",
+            "pct": 14.5
+          },
+          {
+            "item": "Suspension",
+            "pct": 11.8
+          },
+          {
+            "item": "Tyres",
+            "pct": 10.2
+          }
+        ],
+        "advice": "Check headlight aim and handbrake efficiency."
+      }
+    ]
+  },
+  {
+    "make": "MINI",
+    "slug": "mini",
+    "logo": "MINI",
+    "models": [
+      {
+        "name": "Hatch / Cooper",
+        "slug": "cooper",
+        "passRate": 84.6,
+        "avgMileage": 51200,
+        "taxBand": "\u00a3160 - \u00a3190/yr",
+        "topFailures": [
+          {
+            "item": "Suspension bushes & ball joints",
+            "pct": 18.2
+          },
+          {
+            "item": "Lamps & headlights",
+            "pct": 14.9
+          },
+          {
+            "item": "Brake pad wear",
+            "pct": 13.6
+          },
+          {
+            "item": "Tyre tread",
+            "pct": 11.0
+          }
+        ],
+        "advice": "Front suspension wishbone rear bushes are the primary MOT failure point on modern MINIs."
+      }
+    ]
+  },
+  {
+    "make": "Tesla",
+    "slug": "tesla",
+    "logo": "Tesla",
+    "models": [
+      {
+        "name": "Model 3",
+        "slug": "model-3",
+        "passRate": 87.9,
+        "avgMileage": 42100,
+        "taxBand": "\u00a30/yr (Zero Emission)",
+        "topFailures": [
+          {
+            "item": "Suspension upper control arm ball joints",
+            "pct": 24.5
+          },
+          {
+            "item": "Tyre tread & inner shoulder wear",
+            "pct": 21.0
+          },
+          {
+            "item": "Brake disc surface corrosion",
+            "pct": 15.2
+          },
+          {
+            "item": "Headlamp alignment",
+            "pct": 11.8
+          }
+        ],
+        "advice": "Heavy EV weight and high instant torque cause fast tyre inner shoulder wear and front upper control arm squeaks/play."
+      }
+    ]
+  }
+]

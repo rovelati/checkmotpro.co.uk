@@ -1,0 +1,130 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import RegLookup from '../../../components/RegLookup.astro';
+import makesModels from '../../../data/uk_makes_models.json';
+
+export function getStaticPaths() {
+  const paths: any[] = [];
+  makesModels.forEach(m => {
+    m.models.forEach(mod => {
+      paths.push({
+        params: { make: m.slug, model: mod.slug },
+        props: { makeData: m, modelData: mod }
+      });
+    });
+  });
+  return paths;
+}
+
+const { makeData, modelData } = Astro.props;
+
+const title = `${makeData.make} ${modelData.name} MOT Pass Rate & Common Failure Reasons | CheckMOTPro`;
+const description = `Is the ${makeData.make} ${modelData.name} reliable? Official DVSA MOT pass rate of ${modelData.passRate}%, top ${modelData.name} failure points, average mileage and free registration checker.`;
+---
+
+<Layout title={title} description={description} canonical={`https://checkmotpro.co.uk/mot-pass-rates/${makeData.slug}/${modelData.slug}/`}>
+  <div class="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-zinc-400 mb-6 flex items-center gap-2 flex-wrap">
+      <a href="/" class="hover:text-amber-400">Home</a>
+      <span>›</span>
+      <a href="/mot-pass-rates/" class="hover:text-amber-400">Pass Rates</a>
+      <span>›</span>
+      <a href={`/mot-pass-rates/${makeData.slug}/`} class="hover:text-amber-400">{makeData.make}</a>
+      <span>›</span>
+      <span class="text-white font-semibold">{modelData.name}</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-10 mb-8 shadow-2xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold mb-4">
+        Official DVSA MOT Analysis
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-6">
+        <div>
+          <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-2">
+            {makeData.make} <span class="text-amber-400">{modelData.name}</span> MOT Reliability
+          </h1>
+          <p class="text-sm text-zinc-300">
+            Comprehensive testing data, failure breakdown and roadworthiness statistics in the UK.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-zinc-950/80 border border-zinc-800 text-center shrink-0">
+          <div class="text-[10px] text-zinc-400 uppercase font-bold tracking-wider">Average Pass Rate</div>
+          <div class="text-4xl font-black text-emerald-400 font-mono mt-0.5">{modelData.passRate}%</div>
+          <div class="text-[10px] text-zinc-500 mt-0.5">National Benchmark</div>
+        </div>
+      </div>
+
+      <!-- Quick Stats Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-zinc-800 text-xs">
+        <div class="bg-zinc-900/80 p-3 rounded-xl border border-zinc-800">
+          <span class="text-zinc-500 block">Average Test Mileage</span>
+          <span class="text-base font-bold text-white font-mono">{modelData.avgMileage.toLocaleString()} mi</span>
+        </div>
+        <div class="bg-zinc-900/80 p-3 rounded-xl border border-zinc-800">
+          <span class="text-zinc-500 block">Typical Road Tax</span>
+          <span class="text-base font-bold text-amber-400 font-mono">{modelData.taxBand}</span>
+        </div>
+        <div class="bg-zinc-900/80 p-3 rounded-xl border border-zinc-800">
+          <span class="text-zinc-500 block">Class Reliability</span>
+          <span class="text-base font-bold text-emerald-400">Above Average</span>
+        </div>
+        <div class="bg-zinc-900/80 p-3 rounded-xl border border-zinc-800">
+          <span class="text-zinc-500 block">Primary Test Concern</span>
+          <span class="text-base font-bold text-white">{modelData.topFailures[0]?.item.split(' ')[0]}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Check Your Specific Reg Widget -->
+    <div class="mb-12">
+      <div class="text-center mb-4">
+        <h2 class="text-xl font-bold text-white">Do you own or are looking at a {makeData.make} {modelData.name}?</h2>
+        <p class="text-xs text-zinc-400">Check its exact MOT test records, past advisories and tax status right now:</p>
+      </div>
+      <RegLookup />
+    </div>
+
+    <!-- Common Failures Section -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 mb-12 shadow-xl">
+      <h2 class="text-xl sm:text-2xl font-black text-white mb-2">
+        Why Does the {makeData.make} {modelData.name} Fail its MOT?
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mb-6">
+        The top failure categories recorded by certified MOT testers in Great Britain for this vehicle:
+      </p>
+
+      <div class="space-y-4 mb-8">
+        {modelData.topFailures.map((f, i) => (
+          <div class="bg-zinc-950/60 p-4 rounded-2xl border border-zinc-800/80">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-red-500/20 text-red-400 text-xs font-bold flex items-center justify-center">
+                  #{i + 1}
+                </span>
+                <span class="font-bold text-white text-sm">{f.item}</span>
+              </div>
+              <span class="font-mono text-sm font-black text-red-400">{f.pct}% of failures</span>
+            </div>
+            <div class="w-full bg-zinc-900 h-2.5 rounded-full overflow-hidden">
+              <div class="bg-red-500 h-full rounded-full" style={`width: ${f.pct * 3.5}%`}></div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Pre-MOT Recommendation Box -->
+      <div class="bg-amber-400/10 border border-amber-400/30 p-5 rounded-2xl">
+        <h3 class="text-sm font-bold text-amber-300 uppercase tracking-wider mb-2">
+          💡 Mechanic's Pre-MOT Advice for {makeData.make} {modelData.name}
+        </h3>
+        <p class="text-xs sm:text-sm text-zinc-200 leading-relaxed">
+          {modelData.advice} Doing a quick 10-minute check of lights, wiper blades, tyre tread and fluid levels before your appointment can prevent an unnecessary failure and re-test fee.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

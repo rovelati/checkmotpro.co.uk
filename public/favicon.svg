@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0b0f19" />
+  <rect x="6" y="16" width="52" height="32" rx="6" fill="#ffd100" stroke="#000" stroke-width="2" />
+  <rect x="6" y="16" width="10" height="32" rx="4" fill="#003399" />
+  <text x="11" y="27" font-family="Arial, sans-serif" font-weight="900" font-size="7" fill="#ffffff" text-anchor="middle">UK</text>
+  <text x="35" y="38" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="16" fill="#0b0f19" letter-spacing="1" text-anchor="middle">MOT</text>
+  <circle cx="56" cy="14" r="5" fill="#10b981" />
+</svg>

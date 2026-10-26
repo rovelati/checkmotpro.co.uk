@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Cookie Policy | CheckMOTPro.co.uk"
+  description="Learn about the cookies we use on CheckMOTPro.co.uk and manage your preferences."
+>
+  <div class="legal-container">
+    <div class="legal-card">
+      <span class="badge">Legal</span>
+      <h1>Cookie Policy</h1>
+      <p class="updated">Last updated: October 2026</p>
+
+      <h2>1. What Are Cookies?</h2>
+      <p>
+        Cookies are small text files placed on your computer or mobile device when you browse websites. They help the site recognize your device and remember your preferences across sessions.
+      </p>
+
+      <h2>2. Types of Cookies We Use</h2>
+      <p>
+        <strong>Essential Cookies:</strong> Required for fundamental site operations such as session security, CSRF protection, and load balancing. These cannot be disabled.
+      </p>
+      <p>
+        <strong>Analytics Cookies:</strong> Help us measure visitor volume, page views, and popular car models to enhance the speed and usefulness of the service.
+      </p>
+      <p>
+        <strong>Advertising & Personalization:</strong> Set by authorized third-party ad networks (Google AdSense) to display ads tailored to your general interests and vehicle searches.
+      </p>
+
+      <h2>3. Managing Cookie Consent</h2>
+      <p>
+        You can review, modify, or revoke your cookie choices at any time via the consent banner link in our footer. Alternatively, you can configure your browser settings to reject cookies, though some interactive features may function with reduced capability.
+      </p>
+
+      <div class="back-home">
+        <a href="/" class="btn-primary">← Return to MOT Check</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .legal-container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+  .legal-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 2.5rem;
+  }
+  .badge {
+    background: rgba(255, 209, 0, 0.15);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 2.25rem;
+    margin: 0.75rem 0 0.25rem;
+  }
+  .updated {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 1.75rem 0 0.5rem;
+    color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.35rem;
+  }
+  p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  .back-home {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--primary);
+    color: #0b0f19;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import makesModels from '../../data/uk_makes_models.json';
+
+const title = "UK MOT Pass Rates & Car Reliability Guide by Make & Model | CheckMOTPro";
+const description = "Discover the most reliable cars in the UK. Official DVSA MOT pass rates, failure percentages and common fault points for all major car manufacturers.";
+---
+
+<Layout title={title} description={description} canonical="https://checkmotpro.co.uk/mot-pass-rates/">
+  <div class="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-zinc-400 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-amber-400">Home</a>
+      <span>›</span>
+      <span class="text-white font-semibold">MOT Pass Rates by Make</span>
+    </nav>
+
+    <div class="max-w-3xl mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold mb-3">
+        Official DVSA Testing Statistics
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+        MOT Pass Rates & <span class="text-amber-400">Reliability Index</span>
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+        Based on millions of official MOT tests conducted across Great Britain and Northern Ireland. Compare failure rates, common advisory items, and pre-test check tips across every major vehicle manufacturer.
+      </p>
+    </div>
+
+    <!-- Makes Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {makesModels.map(m => {
+        const avgPass = (m.models.reduce((acc, mod) => acc + mod.passRate, 0) / m.models.length).toFixed(1);
+        return (
+          <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-zinc-700 transition-all flex flex-col justify-between shadow-lg shadow-black/40">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-black text-white">{m.make}</h2>
+                <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  {avgPass}% Avg Pass
+                </span>
+              </div>
+              <p class="text-xs text-zinc-400 mb-4">
+                Popular models tested: <strong class="text-zinc-200">{m.models.map(mod => mod.name).join(', ')}</strong>
+              </p>
+
+              <div class="space-y-1.5 mb-6">
+                {m.models.map(mod => (
+                  <a
+                    href={`/mot-pass-rates/${m.slug}/${mod.slug}/`}
+                    class="flex items-center justify-between p-2 rounded-xl bg-zinc-950/60 hover:bg-zinc-800 text-xs transition-colors"
+                  >
+                    <span class="font-semibold text-zinc-200">{m.make} {mod.name}</span>
+                    <span class="font-mono text-emerald-400 font-bold">{mod.passRate}% →</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-zinc-800">
+              <a
+                href={`/mot-pass-rates/${m.slug}/`}
+                class="w-full py-2.5 bg-zinc-800 hover:bg-amber-400 hover:text-zinc-950 text-white font-bold rounded-xl text-xs uppercase tracking-wider text-center block transition-colors"
+              >
+                View All {m.make} Models & Faults →
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</Layout>

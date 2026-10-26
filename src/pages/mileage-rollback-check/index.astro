@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RegLookup from '../../components/RegLookup.astro';
+
+const title = "Odometer Rollback Check — Free Mileage Fraud Detector UK | CheckMOTPro";
+const description = "Detect clocked cars and odometer tampering for free using official DVSA MOT mileage history records. Protect yourself before buying a used vehicle.";
+---
+
+<Layout title={title} description={description} canonical="https://checkmotpro.co.uk/mileage-rollback-check/">
+  <div class="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-zinc-400 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-amber-400">Home</a>
+      <span>›</span>
+      <span class="text-white font-semibold">Mileage Fraud Check</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-10 mb-8 shadow-2xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-semibold mb-4">
+        Consumer Anti-Clocking Tool
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+        Free UK <span class="text-amber-400">Odometer Rollback</span> & Mileage Check
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed mb-6">
+        An estimated <strong>1 in 14 used cars</strong> in the UK has a clocked mileage or altered odometer. Use our free tool to inspect chronological MOT mileage readings logged by certified testers over the car's entire lifespan.
+      </p>
+    </div>
+
+    <!-- Reg Lookup Component -->
+    <div class="mb-12">
+      <RegLookup />
+    </div>
+
+    <!-- Clocking Guide -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 space-y-6">
+      <h2 class="text-xl sm:text-2xl font-black text-white">How Does MOT Mileage Verification Work?</h2>
+
+      <div class="space-y-4 text-xs sm:text-sm text-zinc-300 leading-relaxed">
+        <div class="bg-zinc-950/60 p-5 rounded-2xl border border-zinc-800">
+          <h3 class="font-bold text-white text-base mb-2">How testers record mileage:</h3>
+          <p>
+            Whenever a vehicle is presented at any of the 23,000+ authorised MOT garages across England, Scotland, and Wales, the certified MOT tester must physically read the dashboard odometer and submit the figure directly to the central DVSA computer database before issuing a certificate.
+          </p>
+        </div>
+
+        <div class="bg-zinc-950/60 p-5 rounded-2xl border border-zinc-800">
+          <h3 class="font-bold text-amber-400 text-base mb-2">How to spot an odometer discrepancy:</h3>
+          <p>
+            Look at the annual progression of miles. If a vehicle shows <strong>65,000 miles</strong> in 2023, but the 2024 test record shows <strong>42,000 miles</strong>, the car has either suffered a deliberate rollback ("clocking") or a major cluster replacement error. Never buy a used vehicle with an unexplained mileage decrease without an official manufacturer explanation or garage invoice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

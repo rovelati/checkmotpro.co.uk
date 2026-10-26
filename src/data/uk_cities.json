@@ -1,0 +1,242 @@
+[
+  {
+    "name": "London",
+    "slug": "london",
+    "region": "Greater London",
+    "centresCount": 420
+  },
+  {
+    "name": "Birmingham",
+    "slug": "birmingham",
+    "region": "West Midlands",
+    "centresCount": 185
+  },
+  {
+    "name": "Manchester",
+    "slug": "manchester",
+    "region": "Greater Manchester",
+    "centresCount": 160
+  },
+  {
+    "name": "Leeds",
+    "slug": "leeds",
+    "region": "West Yorkshire",
+    "centresCount": 125
+  },
+  {
+    "name": "Glasgow",
+    "slug": "glasgow",
+    "region": "Scotland",
+    "centresCount": 110
+  },
+  {
+    "name": "Sheffield",
+    "slug": "sheffield",
+    "region": "South Yorkshire",
+    "centresCount": 95
+  },
+  {
+    "name": "Liverpool",
+    "slug": "liverpool",
+    "region": "Merseyside",
+    "centresCount": 105
+  },
+  {
+    "name": "Bristol",
+    "slug": "bristol",
+    "region": "South West",
+    "centresCount": 90
+  },
+  {
+    "name": "Edinburgh",
+    "slug": "edinburgh",
+    "region": "Scotland",
+    "centresCount": 85
+  },
+  {
+    "name": "Cardiff",
+    "slug": "cardiff",
+    "region": "Wales",
+    "centresCount": 75
+  },
+  {
+    "name": "Newcastle upon Tyne",
+    "slug": "newcastle",
+    "region": "North East",
+    "centresCount": 70
+  },
+  {
+    "name": "Nottingham",
+    "slug": "nottingham",
+    "region": "East Midlands",
+    "centresCount": 80
+  },
+  {
+    "name": "Leicester",
+    "slug": "leicester",
+    "region": "East Midlands",
+    "centresCount": 75
+  },
+  {
+    "name": "Coventry",
+    "slug": "coventry",
+    "region": "West Midlands",
+    "centresCount": 65
+  },
+  {
+    "name": "Bradford",
+    "slug": "bradford",
+    "region": "West Yorkshire",
+    "centresCount": 70
+  },
+  {
+    "name": "Belfast",
+    "slug": "belfast",
+    "region": "Northern Ireland",
+    "centresCount": 50
+  },
+  {
+    "name": "Southampton",
+    "slug": "southampton",
+    "region": "Hampshire",
+    "centresCount": 60
+  },
+  {
+    "name": "Reading",
+    "slug": "reading",
+    "region": "Berkshire",
+    "centresCount": 55
+  },
+  {
+    "name": "Derby",
+    "slug": "derby",
+    "region": "Derbyshire",
+    "centresCount": 50
+  },
+  {
+    "name": "Plymouth",
+    "slug": "plymouth",
+    "region": "Devon",
+    "centresCount": 48
+  },
+  {
+    "name": "Wolverhampton",
+    "slug": "wolverhampton",
+    "region": "West Midlands",
+    "centresCount": 55
+  },
+  {
+    "name": "Stoke-on-Trent",
+    "slug": "stoke-on-trent",
+    "region": "Staffordshire",
+    "centresCount": 52
+  },
+  {
+    "name": "Swansea",
+    "slug": "swansea",
+    "region": "Wales",
+    "centresCount": 45
+  },
+  {
+    "name": "Milton Keynes",
+    "slug": "milton-keynes",
+    "region": "Buckinghamshire",
+    "centresCount": 46
+  },
+  {
+    "name": "Northampton",
+    "slug": "northampton",
+    "region": "Northamptonshire",
+    "centresCount": 44
+  },
+  {
+    "name": "Portsmouth",
+    "slug": "portsmouth",
+    "region": "Hampshire",
+    "centresCount": 42
+  },
+  {
+    "name": "Luton",
+    "slug": "luton",
+    "region": "Bedfordshire",
+    "centresCount": 40
+  },
+  {
+    "name": "Norwich",
+    "slug": "norwich",
+    "region": "Norfolk",
+    "centresCount": 42
+  },
+  {
+    "name": "Swindon",
+    "slug": "swindon",
+    "region": "Wiltshire",
+    "centresCount": 38
+  },
+  {
+    "name": "Warrington",
+    "slug": "warrington",
+    "region": "Cheshire",
+    "centresCount": 35
+  },
+  {
+    "name": "Bournemouth",
+    "slug": "bournemouth",
+    "region": "Dorset",
+    "centresCount": 40
+  },
+  {
+    "name": "Peterborough",
+    "slug": "peterborough",
+    "region": "Cambridgeshire",
+    "centresCount": 36
+  },
+  {
+    "name": "Cambridge",
+    "slug": "cambridge",
+    "region": "Cambridgeshire",
+    "centresCount": 34
+  },
+  {
+    "name": "Oxford",
+    "slug": "oxford",
+    "region": "Oxfordshire",
+    "centresCount": 35
+  },
+  {
+    "name": "York",
+    "slug": "york",
+    "region": "North Yorkshire",
+    "centresCount": 32
+  },
+  {
+    "name": "Gloucester",
+    "slug": "gloucester",
+    "region": "Gloucestershire",
+    "centresCount": 30
+  },
+  {
+    "name": "Exeter",
+    "slug": "exeter",
+    "region": "Devon",
+    "centresCount": 30
+  },
+  {
+    "name": "Brighton",
+    "slug": "brighton",
+    "region": "East Sussex",
+    "centresCount": 45
+  },
+  {
+    "name": "Blackpool",
+    "slug": "blackpool",
+    "region": "Lancashire",
+    "centresCount": 32
+  },
+  {
+    "name": "Middlesbrough",
+    "slug": "middlesbrough",
+    "region": "North Yorkshire",
+    "centresCount": 34
+  }
+]

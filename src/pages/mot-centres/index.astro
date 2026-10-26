@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import cities from '../../data/uk_cities.json';
+
+const title = "Authorised MOT Testing Centres Near You — UK City Directory | CheckMOTPro";
+const description = "Find official DVSA-approved MOT testing centres across the UK. Compare local testing garages, maximum fees and booking guidelines across 40+ UK cities.";
+---
+
+<Layout title={title} description={description} canonical="https://checkmotpro.co.uk/mot-centres/">
+  <div class="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-zinc-400 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-amber-400">Home</a>
+      <span>›</span>
+      <span class="text-white font-semibold">MOT Centres Directory</span>
+    </nav>
+
+    <div class="max-w-3xl mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold mb-3">
+        DVSA Authorised Garages
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+        Find Local <span class="text-amber-400">MOT Testing Centres</span>
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+        Browse official authorised MOT test centres across major cities and towns in Great Britain. The maximum legal fee a test centre can charge for a standard passenger car (Class 4) is set by the UK Government at <strong>£54.85</strong> (with many garages offering tests from £35 to £45).
+      </p>
+    </div>
+
+    <!-- Cities Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {cities.map(c => (
+        <a
+          href={`/mot-centres/${c.slug}/`}
+          class="p-5 bg-zinc-900 border border-zinc-800 hover:border-amber-400/50 rounded-2xl transition-all group block shadow-md shadow-black/40"
+        >
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono font-bold text-amber-400">{c.region}</span>
+            <span class="text-zinc-500 group-hover:text-amber-400 group-hover:translate-x-1 transition-all">→</span>
+          </div>
+          <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">{c.name}</h3>
+          <p class="text-xs text-zinc-400 mt-1">{c.centresCount} Approved Test Centres</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

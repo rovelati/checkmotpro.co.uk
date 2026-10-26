@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RegLookup from '../../components/RegLookup.astro';
+
+const title = "Check Car Tax Online (DVLA Road Tax Status) Free | CheckMOTPro";
+const description = "Free online UK road tax check. Verify if a car is taxed or SORN with the DVLA, check vehicle tax expiry date, rates and tax bands instantly with your registration.";
+---
+
+<Layout title={title} description={description} canonical="https://checkmotpro.co.uk/car-tax-check/">
+  <div class="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-zinc-400 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-amber-400">Home</a>
+      <span>›</span>
+      <span class="text-white font-semibold">Check Car Tax</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-10 mb-8 shadow-2xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-4">
+        Official DVLA Vehicle Enquiry Service
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+        Check <span class="text-amber-400">Car Tax Online</span> Free
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed mb-6">
+        Check the road tax status and renewal due date for any car, van, or motorcycle in the UK. Verify whether a vehicle is currently <strong>Taxed</strong>, <strong>Untaxed</strong>, or officially declared as <strong>SORN</strong> (Statutory Off Road Notification).
+      </p>
+    </div>
+
+    <!-- Reg Lookup Component -->
+    <div class="mb-12">
+      <RegLookup />
+    </div>
+
+    <!-- Comprehensive Guide to UK Vehicle Excise Duty (VED) -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 space-y-6">
+      <h2 class="text-xl sm:text-2xl font-black text-white">UK Road Tax & VED Guide for Motorists</h2>
+
+      <div class="space-y-4 text-xs sm:text-sm text-zinc-300 leading-relaxed">
+        <div class="bg-zinc-950/60 p-5 rounded-2xl border border-zinc-800">
+          <h3 class="font-bold text-white text-base mb-2">Can you tax a car without an MOT?</h3>
+          <p>
+            <strong>No.</strong> The DVLA computer system checks the national MOT database automatically whenever you apply to tax a vehicle or set up a Direct Debit. If your MOT has expired, the DVLA will block your tax renewal until a valid test certificate is recorded.
+          </p>
+        </div>
+
+        <div class="bg-zinc-950/60 p-5 rounded-2xl border border-zinc-800">
+          <h3 class="font-bold text-red-400 text-base mb-2">What is the penalty for driving an untaxed car in the UK?</h3>
+          <p>
+            Automated Number Plate Recognition (ANPR) cameras operated by police forces and the DVLA actively scan registration marks. Driving an untaxed vehicle can result in an instant <strong>£80 fine</strong> (reduced to £40 if paid in 28 days), plus back payment of tax owed. If prosecuted in court, maximum penalties can reach <strong>£1,000</strong> or 5 times the annual tax due. Untaxed vehicles left on public roads are also subject to wheel-clamping and impoundment.
+          </p>
+        </div>
+
+        <div class="bg-zinc-950/60 p-5 rounded-2xl border border-zinc-800">
+          <h3 class="font-bold text-white text-base mb-2">What happens to car tax when you buy a used car?</h3>
+          <p>
+            Under UK law since October 2014, <strong>vehicle road tax does not transfer with the vehicle</strong>. The previous owner automatically receives a refund for any complete unused months from the DVLA, and you <em>must</em> tax the vehicle immediately in your name before driving it away, even if the windscreen display or previous owner claims it is taxed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
