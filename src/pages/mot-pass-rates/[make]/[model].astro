@@ -117,7 +117,7 @@ const description = `Is the ${makeData.make} ${modelData.name} reliable? Officia
       </div>
 
       <!-- Pre-MOT Recommendation Box -->
-      <div class="bg-amber-400/10 border border-amber-400/30 p-5 rounded-2xl">
+      <div class="bg-amber-400/10 border border-amber-400/30 p-5 rounded-2xl mb-8">
         <h3 class="text-sm font-bold text-amber-300 uppercase tracking-wider mb-2">
           💡 Mechanic's Pre-MOT Advice for {makeData.make} {modelData.name}
         </h3>
@@ -125,6 +125,29 @@ const description = `Is the ${makeData.make} ${modelData.name} reliable? Officia
           {modelData.advice} Doing a quick 10-minute check of lights, wiper blades, tyre tread and fluid levels before your appointment can prevent an unnecessary failure and re-test fee.
         </p>
       </div>
+
+      <!-- Seed Plates: Recently Checked Vehicles for Model -->
+      {modelData.samplePlates && modelData.samplePlates.length > 0 && (
+        <div class="pt-6 border-t border-zinc-800">
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-3">
+            Recent {makeData.make} {modelData.name} MOT Reports
+          </h3>
+          <p class="text-xs text-zinc-400 mb-4">
+            Click on a sample vehicle registration to view its certified MOT history, past test advisories and mileage record:
+          </p>
+          <div class="flex flex-wrap gap-3">
+            {modelData.samplePlates.map((plate: string) => (
+              <a
+                href={`/check/${plate.toLowerCase()}/`}
+                class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-zinc-950 font-mono font-black text-sm tracking-wider shadow-sm transition-transform hover:-translate-y-0.5 border border-zinc-800"
+              >
+                <span class="w-2.5 h-4 bg-blue-900 rounded-[2px] flex items-center justify-center text-[7px] text-white font-sans font-bold">GB</span>
+                {plate.slice(0, 4)} {plate.slice(4)}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </div>
 </Layout>

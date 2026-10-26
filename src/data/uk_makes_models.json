@@ -28,7 +28,12 @@
             "pct": 9.4
           }
         ],
-        "advice": "Check rear coil springs for corrosion and front anti-roll bar linkages, which are the most common Fiesta MOT failure points."
+        "advice": "Check rear coil springs for corrosion and front anti-roll bar linkages, which are the most common Fiesta MOT failure points.",
+        "samplePlates": [
+          "EA08HSO",
+          "VO65ABC",
+          "GF19XYZ"
+        ]
       },
       {
         "name": "Focus",
@@ -54,7 +59,12 @@
             "pct": 10.2
           }
         ],
-        "advice": "Inspect front suspension lower arm rear bush degradation and check exhaust emissions on older EcoBoost petrol models."
+        "advice": "Inspect front suspension lower arm rear bush degradation and check exhaust emissions on older EcoBoost petrol models.",
+        "samplePlates": [
+          "WP68ABC",
+          "FE14XYZ",
+          "LD72KMN"
+        ]
       },
       {
         "name": "Puma",
@@ -80,7 +90,12 @@
             "pct": 6.8
           }
         ],
-        "advice": "Puma has one of the highest pass rates in class; check windscreen condition and tyre tread before the test."
+        "advice": "Puma has one of the highest pass rates in class; check windscreen condition and tyre tread before the test.",
+        "samplePlates": [
+          "KR20MOT",
+          "BL71XYZ",
+          "WN22CAR"
+        ]
       },
       {
         "name": "Kuga",
@@ -106,7 +121,12 @@
             "pct": 10.0
           }
         ],
-        "advice": "Check rear brake pad wear which tends to wear faster on heavier SUV models."
+        "advice": "Check rear brake pad wear which tends to wear faster on heavier SUV models.",
+        "samplePlates": [
+          "YG18MOT",
+          "RO69REG",
+          "PK21AUT"
+        ]
       }
     ]
   },
@@ -139,7 +159,12 @@
             "pct": 11.0
           }
         ],
-        "advice": "Check all external bulbs and number plate lights; lighting faults account for nearly 20% of Corsa first-time failures."
+        "advice": "Check all external bulbs and number plate lights; lighting faults account for nearly 20% of Corsa first-time failures.",
+        "samplePlates": [
+          "CK16ABC",
+          "MT19XYZ",
+          "HN70MOT"
+        ]
       },
       {
         "name": "Astra",
@@ -165,7 +190,12 @@
             "pct": 9.8
           }
         ],
-        "advice": "Verify handbrake cable tension and look out for front suspension drop link play."
+        "advice": "Verify handbrake cable tension and look out for front suspension drop link play.",
+        "samplePlates": [
+          "RJ15MOT",
+          "AK67REG",
+          "DL20CAR"
+        ]
       },
       {
         "name": "Mokka",
@@ -191,7 +221,12 @@
             "pct": 10.2
           }
         ],
-        "advice": "Inspect front brake pads and check tyre wear on inside edges."
+        "advice": "Inspect front brake pads and check tyre wear on inside edges.",
+        "samplePlates": [
+          "WR18XYZ",
+          "PX21MOT",
+          "BT72REG"
+        ]
       }
     ]
   },
@@ -224,7 +259,12 @@
             "pct": 10.1
           }
         ],
-        "advice": "Examine rear coil springs for hairline cracks and check LED light cluster functionality."
+        "advice": "Examine rear coil springs for hairline cracks and check LED light cluster functionality.",
+        "samplePlates": [
+          "YK66GOL",
+          "MD18VWW",
+          "LO70CAR"
+        ]
       },
       {
         "name": "Polo",
@@ -250,7 +290,12 @@
             "pct": 9.7
           }
         ],
-        "advice": "Polo performs well above average; simple light bulb checks prevent 60% of unnecessary failures."
+        "advice": "Polo performs well above average; simple light bulb checks prevent 60% of unnecessary failures.",
+        "samplePlates": [
+          "RE17POL",
+          "BL19CAR",
+          "WN71REG"
+        ]
       },
       {
         "name": "Tiguan",
@@ -276,7 +321,12 @@
             "pct": 7.5
           }
         ],
-        "advice": "Top up windscreen wash and check electronic parking brake operation before taking for inspection."
+        "advice": "Top up windscreen wash and check electronic parking brake operation before taking for inspection.",
+        "samplePlates": [
+          "PN18TIG",
+          "VO20VWW",
+          "LD72SUV"
+        ]
       }
     ]
   },
@@ -309,7 +359,12 @@
             "pct": 10.8
           }
         ],
-        "advice": "Run-flat tyres frequently wear on the inner shoulder unnoticed; check tyres from underneath before the MOT."
+        "advice": "Run-flat tyres frequently wear on the inner shoulder unnoticed; check tyres from underneath before the MOT.",
+        "samplePlates": [
+          "MW16BMW",
+          "OY18SER",
+          "LB21DRV"
+        ]
       },
       {
         "name": "1 Series",
@@ -335,7 +390,12 @@
             "pct": 12.0
           }
         ],
-        "advice": "Inspect rear suspension coil springs which are prone to fracture near bottom cup."
+        "advice": "Inspect rear suspension coil springs which are prone to fracture near bottom cup.",
+        "samplePlates": [
+          "BK17ONE",
+          "YK19BMW",
+          "WN70SER"
+        ]
       },
       {
         "name": "5 Series",
@@ -361,7 +421,12 @@
             "pct": 9.2
           }
         ],
-        "advice": "Check air suspension bellows for leaks on Touring models and front control arm bushes."
+        "advice": "Check air suspension bellows for leaks on Touring models and front control arm bushes.",
+        "samplePlates": [
+          "LM15FIV",
+          "RO18LUX",
+          "WP21BMW"
+        ]
       }
     ]
   },
@@ -394,7 +459,12 @@
             "pct": 10.4
           }
         ],
-        "advice": "Check registration number plate bulbs and front suspension drop links."
+        "advice": "Check registration number plate bulbs and front suspension drop links.",
+        "samplePlates": [
+          "AU16ATX",
+          "LD18AUD",
+          "PK20PRE"
+        ]
       },
       {
         "name": "A4",
@@ -420,7 +490,12 @@
             "pct": 10.2
           }
         ],
-        "advice": "The complex multi-link front suspension requires careful check of all rubber ball-joint gaiters."
+        "advice": "The complex multi-link front suspension requires careful check of all rubber ball-joint gaiters.",
+        "samplePlates": [
+          "RE15FOO",
+          "VO18SAL",
+          "WN21AUD"
+        ]
       },
       {
         "name": "Q3",
@@ -446,7 +521,12 @@
             "pct": 6.8
           }
         ],
-        "advice": "Inspect front and rear brake pads for minimum 1.5mm lining thickness."
+        "advice": "Inspect front and rear brake pads for minimum 1.5mm lining thickness.",
+        "samplePlates": [
+          "YG17QQQ",
+          "BT19SUV",
+          "KR21AUD"
+        ]
       }
     ]
   },
@@ -479,7 +559,12 @@
             "pct": 11.2
           }
         ],
-        "advice": "Check parking brake efficiency and inspect lower ball joint dust covers."
+        "advice": "Check parking brake efficiency and inspect lower ball joint dust covers.",
+        "samplePlates": [
+          "ME17CLA",
+          "RO19BEN",
+          "WN21MER"
+        ]
       },
       {
         "name": "C-Class",
@@ -505,7 +590,12 @@
             "pct": 9.8
           }
         ],
-        "advice": "Foot-operated or electronic parking brake must achieve at least 16% braking efficiency."
+        "advice": "Foot-operated or electronic parking brake must achieve at least 16% braking efficiency.",
+        "samplePlates": [
+          "MB16CCC",
+          "LD18EST",
+          "PK20BEN"
+        ]
       }
     ]
   },
@@ -538,7 +628,12 @@
             "pct": 11.0
           }
         ],
-        "advice": "Front suspension lower arm bushes are the #1 Qashqai failure; have a mechanic check them before test day."
+        "advice": "Front suspension lower arm bushes are the #1 Qashqai failure; have a mechanic check them before test day.",
+        "samplePlates": [
+          "NI17QSH",
+          "VO19CAR",
+          "WN21NIS"
+        ]
       },
       {
         "name": "Juke",
@@ -564,7 +659,12 @@
             "pct": 10.5
           }
         ],
-        "advice": "Inspect front suspension bushes and check rear number plate illumination bulbs."
+        "advice": "Inspect front suspension bushes and check rear number plate illumination bulbs.",
+        "samplePlates": [
+          "JU16JUK",
+          "BL18CRO",
+          "LD20NIS"
+        ]
       }
     ]
   },
@@ -597,7 +697,12 @@
             "pct": 9.8
           }
         ],
-        "advice": "On Hybrid models, regenerative braking can lead to rear brake disc corrosion from light use; check discs for surface rust."
+        "advice": "On Hybrid models, regenerative braking can lead to rear brake disc corrosion from light use; check discs for surface rust.",
+        "samplePlates": [
+          "TO16HYB",
+          "RE18YAR",
+          "WN21ECO"
+        ]
       },
       {
         "name": "Corolla",
@@ -623,7 +728,12 @@
             "pct": 8.0
           }
         ],
-        "advice": "Corolla has one of the highest MOT pass rates in the UK (over 91%). Standard tyre and bulb checks are sufficient."
+        "advice": "Corolla has one of the highest MOT pass rates in the UK (over 91%). Standard tyre and bulb checks are sufficient.",
+        "samplePlates": [
+          "TO19COR",
+          "BL20TOY",
+          "PK22HYB"
+        ]
       }
     ]
   },
@@ -656,7 +766,12 @@
             "pct": 10.4
           }
         ],
-        "advice": "Check rear brake pad wear and inspect tyre sidewalls for accidental kerb damage."
+        "advice": "Check rear brake pad wear and inspect tyre sidewalls for accidental kerb damage.",
+        "samplePlates": [
+          "HY18TUC",
+          "VO20HYU",
+          "WN22SUV"
+        ]
       },
       {
         "name": "i10",
@@ -682,7 +797,12 @@
             "pct": 10.8
           }
         ],
-        "advice": "Handbrake travel can stretch on city-driven i10 models; ensure it holds the car firmly on steep inclines."
+        "advice": "Handbrake travel can stretch on city-driven i10 models; ensure it holds the car firmly on steep inclines.",
+        "samplePlates": [
+          "HY16TEN",
+          "BL18CIT",
+          "LD21HYU"
+        ]
       }
     ]
   },
@@ -715,7 +835,12 @@
             "pct": 10.5
           }
         ],
-        "advice": "Examine rear brake pads and make sure all LED light units are fully illuminated."
+        "advice": "Examine rear brake pads and make sure all LED light units are fully illuminated.",
+        "samplePlates": [
+          "KI17SPO",
+          "VO19KIA",
+          "WN21SUV"
+        ]
       },
       {
         "name": "Picanto",
@@ -741,7 +866,12 @@
             "pct": 10.2
           }
         ],
-        "advice": "Check headlight aim and handbrake efficiency."
+        "advice": "Check headlight aim and handbrake efficiency.",
+        "samplePlates": [
+          "KI16PIC",
+          "BL18TIN",
+          "LD20KIA"
+        ]
       }
     ]
   },
@@ -774,7 +904,12 @@
             "pct": 11.0
           }
         ],
-        "advice": "Front suspension wishbone rear bushes are the primary MOT failure point on modern MINIs."
+        "advice": "Front suspension wishbone rear bushes are the primary MOT failure point on modern MINIs.",
+        "samplePlates": [
+          "MI16COO",
+          "VO18MIN",
+          "WN21ONE"
+        ]
       }
     ]
   },
@@ -807,7 +942,12 @@
             "pct": 11.8
           }
         ],
-        "advice": "Heavy EV weight and high instant torque cause fast tyre inner shoulder wear and front upper control arm squeaks/play."
+        "advice": "Heavy EV weight and high instant torque cause fast tyre inner shoulder wear and front upper control arm squeaks/play.",
+        "samplePlates": [
+          "TE19ELE",
+          "EV20TES",
+          "WN21BAT"
+        ]
       }
     ]
   }

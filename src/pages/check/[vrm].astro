@@ -1,11 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import RegLookup from '../../components/RegLookup.astro';
+import makesModels from '../../data/uk_makes_models.json';
 
 // Pre-render common sample plates or export static paths
 export function getStaticPaths() {
-  const samplePlates = ['ea08hso', 'vo65abc', 'gf19xyz', 'ld72kmn', 'ab12cde', 'fe14xyz', 'wp68abc', 'kr20mot'];
-  return samplePlates.map(vrm => ({
+  const platesSet = new Set<string>();
+  makesModels.forEach(m => {
+    m.models.forEach((mod: any) => {
+      (mod.samplePlates || []).forEach((p: string) => platesSet.add(p.toLowerCase()));
+    });
+  });
+
+  return Array.from(platesSet).map(vrm => ({
     params: { vrm },
     props: { vrm: vrm.toUpperCase() }
   }));

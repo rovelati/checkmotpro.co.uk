@@ -7,7 +7,9 @@ const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 const urlList = [
   `https://${HOST}/`,
+  `https://${HOST}/number-plate-check/`,
   `https://${HOST}/car-tax-check/`,
+  `https://${HOST}/sorn-check/`,
   `https://${HOST}/mileage-rollback-check/`,
   `https://${HOST}/mot-pass-rates/`,
   `https://${HOST}/mot-centres/`,
@@ -16,11 +18,16 @@ const urlList = [
   `https://${HOST}/cookie-policy/`
 ];
 
-// Add all makes & models
+// Add all makes & models & their seed plates
 for (const make of makesData) {
   urlList.push(`https://${HOST}/mot-pass-rates/${make.slug}/`);
   for (const model of make.models) {
     urlList.push(`https://${HOST}/mot-pass-rates/${make.slug}/${model.slug}/`);
+    if (model.samplePlates) {
+      for (const plate of model.samplePlates) {
+        urlList.push(`https://${HOST}/check/${plate.toLowerCase()}/`);
+      }
+    }
   }
 }
 

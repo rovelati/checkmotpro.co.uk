@@ -1,0 +1,129 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RegLookup from '../../components/RegLookup.astro';
+
+const title = "SORN Check Free — Check Statutory Off Road Notification Status Online | CheckMOTPro";
+const description = "Free UK SORN check. Check if a vehicle is officially declared SORN (Statutory Off Road Notification) with the DVLA, taxed, or untaxed before driving.";
+---
+
+<Layout title={title} description={description} canonical="https://checkmotpro.co.uk/sorn-check/">
+  <div class="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-zinc-400 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-amber-400">Home</a>
+      <span>›</span>
+      <span class="text-white font-semibold">SORN Check</span>
+    </nav>
+
+    <!-- Hero Header -->
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold mb-4">
+        Official DVLA Status Tool
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+        Free UK <span class="text-amber-400">SORN Check</span>
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+        Check instantly whether a vehicle has an active <strong>Statutory Off Road Notification (SORN)</strong> with the DVLA, is taxed, or is currently illegal to drive on public roads.
+      </p>
+    </div>
+
+    <!-- Reg Lookup Box -->
+    <div class="mb-14">
+      <RegLookup />
+    </div>
+
+    <!-- SORN Rules & Penalties Breakdown -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <!-- What is SORN? -->
+      <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+        <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 text-lg mb-3">
+          🚫
+        </div>
+        <h2 class="text-xl font-bold text-white mb-2">What Does SORN Mean?</h2>
+        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-4">
+          A <strong>Statutory Off Road Notification (SORN)</strong> informs the DVLA that a vehicle is kept off the public highway (e.g. in a private driveway, garage, or private land).
+        </p>
+        <p class="text-xs text-zinc-400 leading-relaxed">
+          While a car is SORN, you do not have to pay vehicle excise duty (Road Tax) or maintain car insurance, provided the vehicle never enters or parks on public roads.
+        </p>
+      </div>
+
+      <!-- Legal Penalties -->
+      <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+        <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-red-400/10 text-red-400 text-lg mb-3">
+          ⚠️
+        </div>
+        <h2 class="text-xl font-bold text-white mb-2">Driving a SORN Car Penalties</h2>
+        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-4">
+          Driving a vehicle declared SORN on a public road is a serious offence in the UK unless you meet the sole legal exception:
+        </p>
+        <ul class="text-xs text-zinc-300 space-y-2 mb-2">
+          <li class="flex items-start gap-2">
+            <span class="text-red-400 font-bold">✕</span>
+            <span>Court fines up to <strong>£2,500</strong> plus back-taxes owed.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-400 font-bold">✕</span>
+            <span>Vehicle wheel-clamping or immediate impoundment.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-400 font-bold">✓</span>
+            <span><strong>Sole Exception:</strong> You may only drive a SORN vehicle directly to or from a pre-booked MOT test.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Essential SORN Knowledge -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-10 mb-12 shadow-xl">
+      <h2 class="text-2xl font-black text-white mb-4">
+        Crucial Facts Before Buying a Used Car with SORN
+      </h2>
+
+      <div class="space-y-4 text-xs sm:text-sm text-zinc-300 leading-relaxed">
+        <div class="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
+          <h3 class="font-bold text-amber-400 mb-1">1. SORN Does NOT Transfer Between Owners</h3>
+          <p class="text-zinc-400">
+            When you purchase a used car that the previous keeper declared SORN, the SORN declaration is automatically cancelled by the DVLA upon change of ownership. You must either tax the vehicle immediately online before driving it home or declare SORN in your name.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
+          <h3 class="font-bold text-amber-400 mb-1">2. Parking on the Street with SORN is Illegal</h3>
+          <p class="text-zinc-400">
+            Even if a vehicle is stationary and parked outside your home, if any tyre is touching a public council road or highway, it cannot be SORN and will be flagged by DVLA ANPR camera enforcement vans.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-zinc-950 border border-zinc-800">
+          <h3 class="font-bold text-amber-400 mb-1">3. How to Cancel SORN and Put the Car Back on Road</h3>
+          <p class="text-zinc-400">
+            To un-SORN your car, you simply pay the DVLA road tax online using your V5C logbook reference number. The SORN status expires automatically the moment road tax is registered.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Links Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <a href="/car-tax-check/" class="p-5 rounded-2xl bg-zinc-900 hover:bg-zinc-850 border border-zinc-800 transition-colors block">
+        <div class="text-amber-400 text-lg mb-1">💷</div>
+        <div class="font-bold text-white text-sm mb-1">Car Tax Check</div>
+        <div class="text-xs text-zinc-400">Check road tax rates, emission bands and renewal dates.</div>
+      </a>
+
+      <a href="/number-plate-check/" class="p-5 rounded-2xl bg-zinc-900 hover:bg-zinc-850 border border-zinc-800 transition-colors block">
+        <div class="text-amber-400 text-lg mb-1">🔢</div>
+        <div class="font-bold text-white text-sm mb-1">Number Plate Check</div>
+        <div class="text-xs text-zinc-400">Decode age, area tags and full vehicle history.</div>
+      </a>
+
+      <a href="/mileage-rollback-check/" class="p-5 rounded-2xl bg-zinc-900 hover:bg-zinc-850 border border-zinc-800 transition-colors block">
+        <div class="text-amber-400 text-lg mb-1">⏱️</div>
+        <div class="font-bold text-white text-sm mb-1">Mileage Rollback Check</div>
+        <div class="text-xs text-zinc-400">Inspect odometer history from certified test logs.</div>
+      </a>
+    </div>
+  </div>
+</Layout>

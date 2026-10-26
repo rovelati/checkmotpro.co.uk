@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RegLookup from '../../components/RegLookup.astro';
+import makesModels from '../../data/uk_makes_models.json';
+
+const title = "Free Number Plate Check UK — Instant Reg Check & Vehicle History | CheckMOTPro";
+const description = "Free UK number plate check. Enter any vehicle registration mark (VRM) to instantly check official DVSA MOT history, DVLA road tax status, mileage and vehicle specs.";
+
+const ageIdentifiers = [
+  { year: "2024/25", march: "24", sept: "74" },
+  { year: "2023/24", march: "23", sept: "73" },
+  { year: "2022/23", march: "22", sept: "72" },
+  { year: "2021/22", march: "21", sept: "71" },
+  { year: "2020/21", march: "20", sept: "70" },
+  { year: "2019/20", march: "19", sept: "69" },
+  { year: "2018/19", march: "18", sept: "68" },
+  { year: "2017/18", march: "17", sept: "67" },
+  { year: "2016/17", march: "16", sept: "66" },
+  { year: "2015/16", march: "15", sept: "65" }
+];
+---
+
+<Layout title={title} description={description} canonical="https://checkmotpro.co.uk/number-plate-check/">
+  <div class="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-zinc-400 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-amber-400">Home</a>
+      <span>›</span>
+      <span class="text-white font-semibold">Number Plate Check</span>
+    </nav>
+
+    <!-- Hero Header -->
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold mb-4">
+        100% Free UK Reg Plate Verification
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+        Free UK <span class="text-amber-400">Number Plate Check</span>
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+        Enter any UK vehicle registration mark (VRM) to instantly reveal official government records: MOT test expiry, past failures, recorded mileage history, and DVLA road tax status.
+      </p>
+    </div>
+
+    <!-- Reg Lookup Box -->
+    <div class="mb-14">
+      <RegLookup />
+    </div>
+
+    <!-- Key Information Checklist -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-10 mb-12 shadow-xl">
+      <h2 class="text-2xl font-black text-white mb-2 text-center sm:text-left">
+        What Does a Number Plate Check Reveal?
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mb-8 text-center sm:text-left">
+        Our system queries official DVSA and DVLA government open databases to provide an unbiased snapshot of any registered vehicle:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-zinc-950/80 p-5 rounded-2xl border border-zinc-800/80">
+          <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 font-black text-lg flex items-center justify-center mb-3">
+            📋
+          </div>
+          <h3 class="text-base font-bold text-white mb-1.5">MOT Pass & Fail History</h3>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            See every MOT test since 2005, exact test dates, advisory notices, dangerous defects, and reasons for refusal of a test certificate.
+          </p>
+        </div>
+
+        <div class="bg-zinc-950/80 p-5 rounded-2xl border border-zinc-800/80">
+          <div class="w-10 h-10 rounded-xl bg-emerald-400/10 text-emerald-400 font-black text-lg flex items-center justify-center mb-3">
+            📈
+          </div>
+          <h3 class="text-base font-bold text-white mb-1.5">Mileage Progression</h3>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Verify odometer readings recorded at each annual inspection to protect yourself against vehicle clocking and odometer rollback fraud.
+          </p>
+        </div>
+
+        <div class="bg-zinc-950/80 p-5 rounded-2xl border border-zinc-800/80">
+          <div class="w-10 h-10 rounded-xl bg-blue-400/10 text-blue-400 font-black text-lg flex items-center justify-center mb-3">
+            🏛️
+          </div>
+          <h3 class="text-base font-bold text-white mb-1.5">DVLA Road Tax & SORN</h3>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Confirm whether the vehicle is currently taxed to drive on public roads, registered SORN (Statutory Off Road Notification), or untaxed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- How UK Number Plates Work (Decoder Guide) -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-10 mb-12 shadow-xl">
+      <h2 class="text-2xl font-black text-white mb-2">
+        How UK Number Plates Work: The DVLA Format Decoded
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mb-6">
+        All standard British number plates issued since September 2001 follow a structured 7-character system (e.g. <strong>BD21 XYZ</strong>):
+      </p>
+
+      <!-- Plate Diagram -->
+      <div class="bg-zinc-950 border border-zinc-800 p-6 rounded-2xl mb-8 flex flex-col sm:flex-row items-center justify-around gap-6">
+        <div class="flex items-center gap-1 font-mono font-black text-2xl sm:text-3xl text-zinc-950 bg-amber-400 px-6 py-3 rounded-xl border-2 border-zinc-800 shadow-md">
+          <span class="text-blue-900 bg-blue-100 px-1 rounded text-xs mr-2 py-0.5">UK</span>
+          <span class="underline decoration-blue-600 decoration-4">BD</span>
+          <span class="underline decoration-red-600 decoration-4 ml-2">21</span>
+          <span class="underline decoration-emerald-600 decoration-4 ml-2">XYZ</span>
+        </div>
+
+        <div class="text-xs space-y-2 text-zinc-300">
+          <div><span class="font-bold text-blue-400 font-mono">BD</span> = <strong>DVLA Area Code</strong> (Birmingham / Midlands)</div>
+          <div><span class="font-bold text-red-400 font-mono">21</span> = <strong>Age Identifier</strong> (Issued March – Aug 2021)</div>
+          <div><span class="font-bold text-emerald-400 font-mono">XYZ</span> = <strong>Random Unique Letters</strong></div>
+        </div>
+      </div>
+
+      <!-- Age Identifiers Table -->
+      <h3 class="text-lg font-bold text-white mb-3">UK Age Identifier Lookup Table (2015 – 2025)</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="border-b border-zinc-800 text-zinc-400 font-bold uppercase tracking-wider">
+              <th class="py-2.5 px-3">Year</th>
+              <th class="py-2.5 px-3">March – August</th>
+              <th class="py-2.5 px-3">September – February</th>
+              <th class="py-2.5 px-3">First MOT Due</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/60 font-mono">
+            {ageIdentifiers.map(row => (
+              <tr class="hover:bg-zinc-800/30">
+                <td class="py-2.5 px-3 font-sans font-bold text-white">{row.year}</td>
+                <td class="py-2.5 px-3 text-amber-400 font-black">{row.march}</td>
+                <td class="py-2.5 px-3 text-amber-400 font-black">{row.sept}</td>
+                <td class="py-2.5 px-3 text-zinc-400 font-sans">3 years after registration</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Quick Links to Makes & Guides -->
+    <div class="p-6 rounded-3xl bg-zinc-950 border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <h3 class="text-sm font-bold text-white mb-0.5">Looking for reliability statistics?</h3>
+        <p class="text-xs text-zinc-400">Explore pass/fail rates for top UK vehicle manufacturers.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="/mot-pass-rates/" class="px-4 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-bold transition-colors">
+          Browse Makes →
+        </a>
+        <a href="/car-tax-check/" class="px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-zinc-950 text-xs font-bold transition-colors">
+          Car Tax Check →
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
